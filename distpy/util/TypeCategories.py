@@ -16,13 +16,13 @@ bool_types = [bool, np.bool_]
 int_types = [int, np.int16, np.int32, np.int64]
 """Types representing integers."""
 
-float_types = [float, np.float32, np.float64, np.float128]
+float_types = [float, np.float32, np.float64]
 """Types representing floats."""
 
 real_numerical_types = int_types + float_types
 """Types representing real numbers, including integers and floats."""
 
-complex_numerical_types = [complex, np.complex64, np.complex128, np.complex256]
+complex_numerical_types = [complex, np.complex64, np.complex128]
 """Types representing complex numbers."""
 
 numerical_types = real_numerical_types + complex_numerical_types
