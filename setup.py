@@ -1,18 +1,20 @@
 #!/usr/bin/env python
 """
 File: setup.py
-Author: Keith Tauscher
-Date: 12 Aug 2017
-
+Author: Keith Tauscher (updated)
 Description: Installs distpy.
 """
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-    
-packages = ['distpy.{!s}'.format(submodule)\
-    for submodule in ['util', 'transform', 'distribution', 'jumping']]
-setup(name='distpy', version='0.1', description='Distributions in Python',\
-    packages=packages)
+from setuptools import setup, find_packages
 
+setup(
+    name='distpy',
+    version='0.1',
+    description='Distributions in Python',
+    packages=find_packages(),
+    install_requires=[
+        'numpy',
+        'scipy',
+        'matplotlib',
+        'h5py',
+    ],
+)
